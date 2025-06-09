@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartTravel - Autonomiczny System Planowania Podróży</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            overflow: hidden;
+        }
+
+        .presentation-container {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+
+        .slide {
+            display: none;
+            width: 100%;
+            height: 100%;
+            padding: 40px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.6s ease-in-out;
+        }
+
+        .slide.active {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+        }
+
+        .slide h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .slide h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #FFD700;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .slide h3 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #FFA500;
+            text-align: center;
+        }
+
+        .slide p {
+            font-size: 1.3em;
+            line-height: 1.6;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+
+        .logo {
+            font-size: 4em;
+            background: linear-gradient(45deg, #FFD700, #FFA500, #FF6B6B);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+        }
+
+        .subtitle {
+            font-size: 1.5em;
+            color: #E0E0E0;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            width: 100%;
+            max-width: 1200px;
+            margin: 30px 0;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .feature-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .feature-title {
+            font-size: 1.5em;
+            color: #FFD700;
+            margin-bottom: 15px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .feature-desc {
+            font-size: 1.1em;
+            line-height: 1.5;
+            text-align: center;
+            color: #E0E0E0;
+        }
+
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            max-width: 800px;
+            margin: 40px 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            min-width: 150px;
+        }
+
+        .stat-number {
+            font-size: 3em;
+            color: #FFD700;
+            font-weight: 700;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 1.1em;
+            color: #E0E0E0;
+            margin-top: 10px;
+        }
+
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1000px;
+            margin: 30px 0;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #FFD700, #FFA500);
+            z-index: 1;
+        }
+
+        .timeline-item {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            border: 2px solid #FFD700;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            min-width: 180px;
+        }
+
+        .timeline-date {
+            color: #FFD700;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+
+        .timeline-desc {
+            color: #E0E0E0;
+            font-size: 0.9em;
+            margin-top: 8px;
+        }
+
+        .navigation {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+            z-index: 1000;
+        }
+
+        .nav-btn {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1em;
+            font-weight: 500;
+        }
+
+        .nav-btn:hover {
+            background: rgba(255, 215, 0, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .slide-counter {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 15px 25px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 1.1em;
+        }
+
+        .risk-item {
+            background: rgba(255, 107, 107, 0.1);
+            border: 1px solid rgba(255, 107, 107, 0.3);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px 0;
+            text-align: left;
+        }
+
+        .risk-title {
+            color: #FF6B6B;
+            font-weight: 600;
+        }
+
+        .cta-button {
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            color: #000;
+            padding: 20px 40px;
+            border-radius: 30px;
+            font-size: 1.3em;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 30px;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .slide.active * {
+            animation: fadeInUp 0.8s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="slide-counter">
+            <span id="current-slide">1</span> / <span id="total-slides">8</span>
+        </div>
+
+        <!-- Slide 1: Tytuł -->
+        <div class="slide active">
+            <div class="logo">🌍 SmartTravel</div>
+            <h1>Autonomiczny System Planowania Podróży</h1>
+            <p class="subtitle">Rewolucja w branży turystycznej dzięki sztucznej inteligencji</p>
+            <div class="stats-container">
+                <div class="stat-item">
+                    <span class="stat-number">5</span>
+                    <div class="stat-label">minut na plan</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">80%</span>
+                    <div class="stat-label">automatyzacji</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">95%</span>
+                    <div class="stat-label">dokładności</div>
+                </div>
+            </div>
+        </div>
+<!-- Slide 2: Tradycja vs SmartTravel AI -->
+<div class="slide">
+    <h2 style="color:#FFD700; font-size:2.5em; margin-bottom:20px;">Tradycja vs SmartTravel</h2>
+    <div class="features-grid" style="grid-template-columns: 1fr 1fr; gap: 40px;">
+        <div style="background: rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 30px; text-align: left;">
+            <h3 style="color:#FF6B6B; text-align:center;">😤 Tradycyjny sposób</h3>
+            <p>⏰ Żmudne wypełnianie formularzy</p>
+            <p>🔍 Ręczne przeglądanie setek opcji</p>
+            <p>😵 Porównywanie cen na różnych stronach</p>
+            <p>📱 Brak personalizacji</p>
+        </div>
+        <div style="background: rgba(0, 210, 211, 0.2); border-radius: 20px; padding: 30px; text-align: left;">
+            <h3 style="color:#00d2d3; text-align:center;">✨ SmartTravel AI</h3>
+            <p>🧠 Jeden prosty prompt wystarczy</p>
+            <p>⚡ Kompleksowy plan w 30 sekund</p>
+            <p>🎯 Personalizowane rekomendacje</p>
+            <p>🚀 Automatyzacja i optymalizacja</p>
+        </div>
+    </div>
+</div>
+        <!-- Slide 2: Problem i Rozwiązanie -->
+        <div class="slide">
+            <h2>Problem na Rynku</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⏰</div>
+                    <div class="feature-title">Czasochłonne planowanie</div>
+                    <div class="feature-desc">Tradycyjne planowanie podróży wymaga godzin researchu i porównywania opcji</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧩</div>
+                    <div class="feature-title">Fragmentaryczne źródła</div>
+                    <div class="feature-desc">Informacje rozproszone po dziesiątkach platform i serwisów</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">❌</div>
+                    <div class="feature-title">Błędy i niedopasowanie</div>
+                    <div class="feature-desc">Brak personalizacji prowadzi do nieoptymalnych wyborów</div>
+                </div>
+            </div>
+            <h3 style="color: #FFD700; margin-top: 40px;">SmartTravel eliminuje te problemy dzięki AI</h3>
+        </div>
+
+        <!-- Slide 3: Innowacyjne Rozwiązanie -->
+        <div class="slide">
+            <h2>Innowacyjna Technologia</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <div class="feature-title">Sztuczna Inteligencja</div>
+                    <div class="feature-desc">Zaawansowane algorytmy AI analizują preferencje i optymalizują wybory</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔗</div>
+                    <div class="feature-title">Integracja API</div>
+                    <div class="feature-desc">Połączenie z 5+ źródłami danych: przewoźnicy, hotele, pogoda, atrakcje</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <div class="feature-title">Automatyzacja</div>
+                    <div class="feature-desc">Automatyczne rezerwacje, płatności i zarządzanie zmianami</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <div class="feature-title">Multi-platform</div>
+                    <div class="feature-desc">Dostęp przez web i aplikacje mobilne z synchronizacją</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Korzyści Biznesowe -->
+        <div class="slide">
+            <h2>Korzyści Biznesowe</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <div class="feature-title">Redukcja Kosztów</div>
+                    <div class="feature-desc">80% mniej czasu na planowanie = znaczące oszczędności dla firm</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <div class="feature-title">Personalizacja</div>
+                    <div class="feature-desc">AI dostosowuje oferty do indywidualnych potrzeb każdego użytkownika</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <div class="feature-title">Skalowalność</div>
+                    <div class="feature-desc">System obsługuje tysiące użytkowników jednocześnie</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌟</div>
+                    <div class="feature-title">Przewaga Konkurencyjna</div>
+                    <div class="feature-desc">Pierwszy w pełni autonomiczny system planowania podróży na rynku</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Harmonogram Projektu -->
+        <div class="slide">
+            <h2>Harmonogram Realizacji</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">IV 2026</div>
+                    <div class="timeline-desc">Analiza & Zespół</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">IX 2026</div>
+                    <div class="timeline-desc">Projekt Techniczny</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">X 2026</div>
+                    <div class="timeline-desc">Strategia Testów</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">III 2027</div>
+                    <div class="timeline-desc">System Pilotażowy</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">VI 2027</div>
+                    <div class="timeline-desc">Pełne Wdrożenie</div>
+                </div>
+            </div>
+            <div class="stats-container" style="margin-top: 50px;">
+                <div class="stat-item">
+                    <span class="stat-number">24</span>
+                    <div class="stat-label">miesięcy realizacji</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">16</span>
+                    <div class="stat-label">miesięcy do pilotażu</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: Budżet i ROI -->
+        <div class="slide">
+            <h2>Inwestycja i Zwrot</h2>
+            <div class="stats-container">
+                <div class="stat-item">
+                    <span class="stat-number">2.1M</span>
+                    <div class="stat-label">PLN budżet</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">1.9M</span>
+                    <div class="stat-label">PLN wykonanie</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">140K</span>
+                    <div class="stat-label">PLN inicjacja</div>
+                </div>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <div class="feature-title">Podział Budżetu</div>
+                    <div class="feature-desc">90% na rozwój systemu, 6.5% inicjacja, 3.5% zamknięcie</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <div class="feature-title">Potencjał Rynku</div>
+                    <div class="feature-desc">Rynek planowania podróży wart miliardy dolarów rocznie</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💎</div>
+                    <div class="feature-title">Przewaga Czasowa</div>
+                    <div class="feature-desc">First-mover advantage w segmencie AI dla turystyki</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: Zarządzanie Ryzykiem -->
+        <div class="slide">
+            <h2>Zarządzanie Ryzykiem</h2>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="risk-item">
+                    <div class="risk-title">🔗 Integracja API</div>
+                    <div>Mitygacja: Wczesne testy integracji, backup'owe źródła danych</div>
+                </div>
+                <div class="risk-item">
+                    <div class="risk-title">🤖 Algorytmy AI</div>
+                    <div>Mitygacja: Iteracyjne testowanie, human oversight, ciągła optymalizacja</div>
+                </div>
+                <div class="risk-item">
+                    <div class="risk-title">💰 Koszty AI</div>
+                    <div>Mitygacja: Budżet uwzględnia 20% rezerwy, monitoring kosztów</div>
+                </div>
+                <div class="risk-item">
+                    <div class="risk-title">🏢 Konkurencja</div>
+                    <div>Mitygacja: Szybkie wdrożenie, ochrona IP, unikalne funkcjonalności</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 8: Call to Action -->
+        <div class="slide">
+            <h1>Dołącz do Rewolucji w Turystyce</h1>
+            <p>SmartTravel to nie tylko produkt - to przyszłość branży turystycznej</p>
+            <div class="stats-container">
+                <div class="stat-item">
+                    <span class="stat-number">5 min</span>
+                    <div class="stat-label">zamiast godzin</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">95%</span>
+                    <div class="stat-label">dokładności AI</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">2027</span>
+                    <div class="stat-label">start rynkowy</div>
+                </div>
+            </div>
+            <button class="cta-button">Rozpocznijmy Współpracę</button>
+            <p style="margin-top: 30px; font-size: 1.1em;">Kontakt: Linde CEO | SmartTravel Project Team</p>
+        </div>
+    </div>
+
+    <div class="navigation">
+        <button class="nav-btn" onclick="previousSlide()">← Poprzedni</button>
+        <button class="nav-btn" onclick="nextSlide()">Następny →</button>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        
+        document.getElementById('total-slides').textContent = totalSlides;
+
+        function showSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (n + totalSlides) % totalSlides;
+            slides[currentSlide].classList.add('active');
+            document.getElementById('current-slide').textContent = currentSlide + 1;
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function previousSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                nextSlide();
+            } else if (e.key === 'ArrowLeft') {
+                previousSlide();
+            }
+        });
+
+        // Auto-advance slides (optional - uncomment to enable)
+        // setInterval(nextSlide, 10000);
+    </script>
+</body>
+</html>

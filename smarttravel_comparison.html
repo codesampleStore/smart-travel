@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartTravel - Inteligentne Planowanie Podróży</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .comparison-container {
+            display: flex;
+            min-height: 600px;
+        }
+
+        .side {
+            flex: 1;
+            padding: 40px;
+            position: relative;
+        }
+
+        .old-way {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            color: white;
+        }
+
+        .new-way {
+            background: linear-gradient(135deg, #00d2d3, #54a0ff);
+            color: white;
+        }
+
+        .side h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .browser-mockup {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative;
+            min-height: 400px;
+        }
+
+        .browser-header {
+            background: #e9ecef;
+            height: 40px;
+            border-radius: 10px 10px 0 0;
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+            margin: -20px -20px 20px;
+        }
+
+        .browser-dots {
+            display: flex;
+            gap: 8px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .dot:nth-child(1) { background: #ff5f57; }
+        .dot:nth-child(2) { background: #ffbd2e; }
+        .dot:nth-child(3) { background: #28ca42; }
+
+        .booking-form {
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #495057;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #dee2e6;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 15px;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+        }
+
+        .booking-logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #003580;
+            margin-bottom: 20px;
+        }
+
+        .smarttravel-interface {
+            background: #2c3e50;
+            color: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .st-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .st-logo {
+            background: linear-gradient(135deg, #00d2d3, #54a0ff);
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 24px;
+        }
+
+        .st-title {
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        .chat-input {
+            background: rgba(255,255,255,0.1);
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: 25px;
+            padding: 15px 20px;
+            color: white;
+            font-size: 16px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .chat-input::placeholder {
+            color: rgba(255,255,255,0.7);
+        }
+
+        .ai-response {
+            background: rgba(0,210,211,0.2);
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 15px;
+            border-left: 4px solid #00d2d3;
+        }
+
+        .progress-indicator {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            padding: 0 10px;
+        }
+
+        .step {
+            text-align: center;
+            flex: 1;
+        }
+
+        .step-number {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 8px;
+            font-weight: 600;
+        }
+
+        .step.active .step-number {
+            background: #00d2d3;
+        }
+
+        .features-list {
+            margin-top: 30px;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .feature-icon {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.3);
+            margin-right: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .vs-divider {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #667eea;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            z-index: 10;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .browser-mockup, .smarttravel-interface {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        @media (max-width: 768px) {
+            .comparison-container {
+                flex-direction: column;
+            }
+            
+            .vs-divider {
+                position: static;
+                transform: none;
+                margin: 20px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 SmartTravel</h1>
+            <p>Automatyczne planowanie podróży z wykorzystaniem sztucznej inteligencji</p>
+        </div>
+
+        <div class="comparison-container">
+            <div class="side old-way">
+                <h2>😤 Tradycyjny sposób</h2>
+                
+                <div class="browser-mockup">
+                    <div class="browser-header">
+                        <div class="browser-dots">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="booking-form">
+                        <div class="booking-logo">Booking.com</div>
+                        
+                        <div class="form-group">
+                            <label>Dokąd jedziesz?</label>
+                            <input type="text" class="form-control" placeholder="Amsterdam, Holandia">
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Data przyjazdu</label>
+                                <input type="date" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Data wyjazdu</label>
+                                <input type="date" class="form-control">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Liczba gości</label>
+                                <select class="form-control">
+                                    <option>1 dorosły</option>
+                                    <option>2 dorosłych</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Liczba pokoi</label>
+                                <select class="form-control">
+                                    <option>1 pokój</option>
+                                    <option>2 pokoje</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Budżet (za noc)</label>
+                            <input type="text" class="form-control" placeholder="50 - 200 EUR">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Typ noclegu</label>
+                            <select class="form-control">
+                                <option>Hotel</option>
+                                <option>Apartament</option>
+                                <option>Hostel</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="features-list">
+                    <div class="feature">
+                        <div class="feature-icon">⏰</div>
+                        Żmudne wypełnianie formularzy
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">🔍</div>
+                        Ręczne przeglądanie setek opcji
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">😵</div>
+                        Porównywanie cen na różnych stronach
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">📱</div>
+                        Brak personalizacji
+                    </div>
+                </div>
+            </div>
+
+            <div class="vs-divider">VS</div>
+
+            <div class="side new-way">
+                <h2>✨ SmartTravel</h2>
+                
+                <div class="smarttravel-interface">
+                    <div class="st-header">
+                        <div class="st-logo">🧠</div>
+                        <div class="st-title">SmartTravel AI</div>
+                    </div>
+                    
+                    <input type="text" class="chat-input" placeholder="Zaplanuj mi podróż służbową do Amsterdamu. Wybierz hotel blisko mojej firmy w optymalnej cenie" readonly value="Zaplanuj mi podróż służbową do Amsterdamu. Wybierz hotel blisko mojej firmy w optymalnej cenie">
+                    
+                    <div class="progress-indicator">
+                        <div class="step active">
+                            <div class="step-number">1</div>
+                            <small>Analiza</small>
+                        </div>
+                        <div class="step active">
+                            <div class="step-number">2</div>
+                            <small>Wyszukiwanie</small>
+                        </div>
+                        <div class="step active">
+                            <div class="step-number">3</div>
+                            <small>Optymalizacja</small>
+                        </div>
+                        <div class="step active">
+                            <div class="step-number">4</div>
+                            <small>Plan gotowy</small>
+                        </div>
+                    </div>
+                    
+                    <div class="ai-response">
+                        <strong>🎯 Znalazłem idealny plan!</strong><br><br>
+                        📍 <strong>Hotel:</strong> NH Collection Amsterdam Centre<br>
+                        💰 <strong>Cena:</strong> 145 EUR/noc (optymalna dla lokalizacji)<br>
+                        🚶 <strong>Odległość:</strong> 8 min pieszo od Twojej firmy<br>
+                        ✈️ <strong>Transport:</strong> Bezpośrednie połączenie z lotniska<br>
+                        🍽️ <strong>Bonus:</strong> Śniadanie biznesowe w cenie
+                    </div>
+                </div>
+
+                <div class="features-list">
+                    <div class="feature">
+                        <div class="feature-icon">🚀</div>
+                        Jeden prosty prompt wystarczy
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">🧠</div>
+                        AI analizuje Twoje potrzeby
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">⚡</div>
+                        Kompleksowy plan w 30 sekund
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">🎯</div>
+                        Personalizowane rekomendacje
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
