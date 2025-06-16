@@ -1,0 +1,767 @@
+Przedmiotem niniejszej analizy jest opis planu zarządzania projektem zatytułowanym „SmartTravel – Autonomiczny System Planowania Podróży”, który będzie realizowany w okresie 04.2025-01.2027 przez firmę Linde. 
+1.	Opis jednostki gospodarczej
+	Jednostką realizującą projekt „SmartTravel – Autonomiczny System Planowania Podróży” jest firma Linde, pełniąca jednocześnie rolę sponsora projektu, właściciela produktu oraz głównego wykonawcy. Linde to przedsiębiorstwo działające w sektorze nowych technologii i innowacji cyfrowych, specjalizujące się w projektowaniu i wdrażaniu zintegrowanych rozwiązań informatycznych na potrzeby szeroko rozumianego rynku usług. Firma koncentruje się na tworzeniu systemów wspierających automatyzację procesów użytkowych, analitykę danych oraz personalizację doświadczeń klientów.
+1.1	Struktura organizacyjna
+	Organizacja Linde funkcjonuje w strukturze macierzowej z elementami struktury projektowej, co zapewnia efektywne alokowanie specjalistów i zasobów do kluczowych inicjatyw rozwojowych. Na czas realizacji projektu powołano dedykowany zespół projektowy pod kierownictwem wyznaczonego Project Managera. Projekt korzysta z zasobów wewnętrznych firmy, takich jak:
+•	Dział rozwoju oprogramowania (front-end i back-end),
+•	Dział integracji systemowej i bezpieczeństwa IT,
+•	Dział badań i analiz UX/UI,
+•	Dział compliance i prawny (w tym specjalistów ds. RODO i umów partnerskich),
+•	Dział marketingu i analiz rynkowych.
+	Jednostka posiada pełne zaplecze techniczne i operacyjne niezbędne do samodzielnej realizacji projektu w modelu MVP, z możliwością dalszej rozbudowy systemu w modelu iteracyjnym lub hybrydowym.
+1.2	 Zasoby i kompetencje
+	Linde dysponuje wysoko wykwalifikowaną kadrą specjalistów z doświadczeniem w tworzeniu aplikacji webowych, mobilnych oraz w realizacji złożonych projektów integracyjnych opartych o API. Pracownicy firmy posiadają kompetencje w zakresie architektury skalowalnych systemów (chmurowych, mikroserwisowych), co umożliwia budowę stabilnych i elastycznych rozwiązań gotowych do komercjalizacji. Firma wdraża również dobre praktyki w zakresie Agile i zarządzania jakością, co zapewnia wysoką jakość kodu i skrócony czas wprowadzania zmian.
+
+1.3	Model finansowania i zarządzania projektem
+	Projekt SmartTravel jest finansowany ze środków własnych jednostki gospodarczej oraz potencjalnych środków wspierających działalność badawczo-rozwojową (np. fundusze UE lub krajowe programy innowacyjne). Zarządzanie projektem odbywa się zgodnie z klasycznymi metodykami PMBOK®, z wykorzystaniem planów pomocniczych (m.in. plan zarządzania zakresem, harmonogramem, budżetem, komunikacją, ryzykiem i jakością).
+	Project Manager raportuje bezpośrednio do Zarządu firmy oraz sponsora projektu. W zależności od etapu realizacji, projekt może korzystać z narzędzi Agile do iteracyjnego rozwijania funkcjonalności (np. backlogi, sprinty, testowanie wersji beta).
+2.	Uzasadnienie wyboru przedmiotu projektu
+	SmartTravel odpowiada na dynamicznie rosnące potrzeby rynku turystycznego. Rok 2024 przyniósł rekordową liczbę podróży i wcześniejsze rezerwacje wyjazdów, co świadczy o silnym popycie na usługi turystyczne. Jednocześnie współcześni klienci oczekują ofert dokładnie dopasowanych do ich indywidualnych potrzeb i pasji. Transformacja cyfrowa zmieniła sposób organizacji wyjazdów – turyści powszechnie korzystają z mobilnych aplikacji i platform online do rezerwacji i planowania podróży. SmartTravel wykorzystuje te trendy: system łączy dane z biur podróży, przewoźników (lotniczych, kolejowych, autobusowych), hoteli, prognoz pogody i wypożyczalni samochodów, aby automatycznie generować spersonalizowane plany podróży.
+	SmartTravel umożliwia kompleksową organizację podróży przy minimalnym zaangażowaniu użytkownika. Na podstawie preferencji system generuje optymalny plan uwzględniający środki transportu (w tym loty), noclegi, wynajem samochodów oraz atrakcje, dzięki czemu podróżowanie staje się bardziej efektywne i bezproblemowe.  Dostępność platformy przez przeglądarkę i aplikacje mobilne wpisuje się w strategię cyfryzacji i innowacyjności firmy. Realizacja projektu wspiera cele strategiczne przedsiębiorstwa – pozwala rozwijać nowe usługi oparte na nowoczesnych technologiach, co może zwiększyć przychody i poprawić konkurencyjność oraz wizerunek firmy
+2.1	Analiza SWOT
+Siły (Strenghts)	Słabości (Weaknesses)
+✓	Zaawansowana integracja wielu źródeł danych umożliwiająca pełny obraz podróży. 
+✓	Automatyzacja procesu planowania i rezerwacji (minimalna praca użytkownika). 
+✓	Dostępność wieloplatformowa (responsywna strona + aplikacje mobilne). 
+✓	Personalizacja planów podróży uwzględniająca preferencje klienta.
+✓	Silne wsparcie wewnętrzne – projekt strategiczny dla organizacji	χ	Duża złożoność techniczna projektu i wyzwania integracyjne. 
+χ	Wysokie koszty wdrożenia oraz ryzyko technologiczne związane z AI i integracjami. 
+χ	Silna zależność od zewnętrznych dostawców danych (APIs partnerów, dostępności usług). 
+χ	Konieczność zapewnienia pełnego bezpieczeństwa i prywatności danych użytkowników. 
+χ	Nowość rozwiązania wymaga edukacji rynku i przekonania użytkowników.
+Szanse (Oppourtunities)	Zagrożenia (Threats)
+✓	Odbudowa i wzrost rynku turystycznego po pandemii, zwiększona liczba podróży
+✓	Rosnące znaczenie personalizacji i sztucznej inteligencji w turystyce
+✓	Możliwości ekspansji na kolejne rynki (obecnie 5 krajów UE) oraz rozwój platformy o nowe funkcje (np. turystyka lokalna, planowanie eventów)
+✓	Współpraca z biurami podróży i przewoźnikami – potencjalne partnerstwa biznesowe. 
+✓	Zmieniające się zwyczaje podróżnych (np. wzrost poszukiwania komfortu i kompleksowej obsługi) zwiększają popyt na tego typu rozwiązania.	χ	Silna konkurencja ze strony istniejących systemów i aplikacji 
+χ	Dynamiczne zmiany w branży (np. nowe technologie, zmiany prawne) mogą wymagać stałych aktualizacji. 
+χ	Czynniki zewnętrzne: kryzysy zdrowotne czy polityczne mogą ograniczyć podróżowanie. 
+χ	Ryzyko błędów algorytmów AI i błędnych rekomendacji.
+χ	Zmiany regulacyjne (np. RODO, prawo turystyczne) mogą wpłynąć na funkcjonowanie systemu.
+2.2	Korzyści z Realizacji Projektu
+Dla jednostki gospodarczej (Linde):
+•	Nowe źródło przychodów i rynkowa dywersyfikacja: Wprowadzenie innowacyjnej usługi SmartTravel pozwala firmie wejść na rynek systemów planowania podróży, rozwijać nowe produkty i wzmocnić kanały przychodów.
+•	Wzrost konkurencyjności i innowacyjnego wizerunku: Zaawansowany technologicznie projekt buduje markę Linde jako lidera innowacji. Zautomatyzowane procesy i inteligentne rozwiązania podnoszą efektywność operacyjną, co przekłada się na pozytywny odbiór w oczach klientów i partnerów.
+•	Optymalizacja procesów: Automatyzacja rezerwacji i analizy danych skraca czas
+potrzebny na organizację wyjazdów, umożliwiając szybsze i bardziej trafne podejmowanie decyzji biznesowych.
+	Dla użytkowników końcowych:
+•	Oszczędność czasu i wygoda: SmartTravel łączy wszystkie etapy planowania w jednym miejscu – rezerwacje lotów, hoteli i samochodów odbywają się jednocześnie. Dzięki temu podróżni nie muszą korzystać z wielu oddzielnych aplikacji, co znacząco przyspiesza przygotowania do wyjazdu.
+•	Dostosowanie do indywidualnych potrzeb: System analizuje preferencje klienta (budżet, zainteresowania, tempo podróży) i generuje unikalny, spersonalizowany plan wycieczki. Dzięki temu użytkownik otrzymuje ofertę skrojoną na miarę swoich oczekiwań.
+
+
+
+
+
+
+
+
+3.	Karta Projektu
+Przygotował / Prepared by:
+Linde	Data / Date: 23.01.2024
+	Wersja / Version: 0.0.4
+Nazwa Projektu / Project Name:  SmartTravel – Autonomiczny System Planowania Podróży
+Sponsor: Linde CEO .
+Opis projektu / Project Summary:
+Stworzenie systemu do szczegółowego zarządzania procesem planowania podróży z minimalnym udziałem użytkownika.  System ma integrować dane z różnych źródeł, takich jak przewoźnicy, hotele, prognozy pogody i inne usługi związane z podróżą, aby dostarczać użytkownikom spersonalizowane plany podróży. System powinien automatyzować jak najwięcej procesów - rezerwacja hotelu, zakup biletów etc. 
+Kierownik Projektu / Project Manager:	Kluczowi interesariusze (dla kogo to robimy?) / Key stakeholders: użytkownicy końcowi, partnerzy transportowi, hotelowi i atrakcji
+Pozostali Interesariusze (uczestnicy) / Other stakeholders:
+Instytucje regulacyjne/prawnicy, media, użytkownicy pośredni (firmy korporacyjne, agenci podróży), platformy społecznościowe, zespół projektowy, inwestorzy
+
+Odpowiedzialność PM’a / PM Responsibilities:
+•	Planowanie projektu: definiowanie celów, tworzenie harmonogramu, zarządzanie budżetem
+•	Zarządzanie zespołem: rekrutacja, motywowanie i wspieranie zespołu, rozwiązywanie konfliktów 
+•	Komunikacja z interesariuszami: zarządzanie oczekiwaniami interesariuszy, raportowanie postępów
+•	Zarządzanie ryzykiem, zasobami, zakresem projektu
+•	Przywództwo, budowanie wiary w sukces  
+•	Współpraca z interesariuszami
+Cele projektu (dlaczego to robimy?) / Objectives:
+Główny cel projektu to wdrożenie systemu do automatycznego zarządzania procesem planowania podróży do 31.03.2027, umożliwiającego użytkownikom:
+•	Stworzenie spersonalizowanego planu podróży w czasie krótszym niż 5 minut dzięki integracji z co najmniej 5 źródłami danych (np. przewoźnicy, hotele, prognozy pogody).
+•	Automatyzację kluczowych procesów, takich jak rezerwacja hotelu i zakup biletów, osiągając 80% redukcji udziału użytkownika w porównaniu do manualnego planowania podróży.
+•	Udostępnienie gotowego systemu użytkownikom testowym do oceny w ramach fazy pilotażowej najpóźniej 16 miesięcy od rozpoczęcia projektu, z zapewnieniem co najmniej 95% poprawności generowanych planów podróży.
+
+Wstępny zakres projektu (co konkretnie mamy zrobić?) / Scope:
+Zakres Inicjowania:
+•	Analiza rynku, opinie ekspertów
+•	Wymagania funkcjonalne
+•	Zespół ekspertów
+
+Zakres Wykonania:
+•	Technologie i narzędzia
+•	Projekt Systemu
+•	Rozwój funkcjonalności
+•	Testowanie
+•	Pilotaż
+•	Wdrożenie pełnej wersji systemu
+Zakres Zakończenia:
+•	Produkt końcowy
+•	Retrospektywy projektu
+•	Lekcje wyciągnięte (lesson learned)
+•	Dokumentacja projektu
+•	Operacje utrzymaniowe 
+Harmonogram (kamienie milowe) / Milestone schedule:
+Analiza wymagań, budowa zespołu do 31.04.2026
+Projekt techniczny podsystemów do 31.09.2026
+Opracowanie strategii testowania do 31.10.2026
+Implementacja systemu pilotażowego do 01.03.2027
+Udostępnienie gotowego systemu użytkownikom testowym do oceny w ramach fazy pilotażowej do 31.03.2027
+Wdrożenie pełnej wersji systemu do 31.01.2027
+Budżet / Budget: od 2,000,000 PLN do 2,200,000 PLN
+1. Zakres Inicjowania – od 100,000 do 140,000 PLN
+2. Zakres Wykonania – od 1,850,000 do 1,990,000 PLN
+3. Zakres Zakończenia -  od 50,000 do 70,000 PLN
+Ryzyka / Risks: 
+•	Integracja z zewnętrznymi API dostawców
+•	Błędy związane z działaniem algorytmów AI
+•	Koszty związane z dostawcami usług AI
+•	Kurs USD
+•	Brak zainteresowania użytkowników
+•	Bezpieczeństwo danych
+•	Technologiczny gigant (google, amazon) wprowadzi podobne rozwiązanie
+Założenia (czego jeszcze nie wiemy i musimy założyć) / Assumptions:
+•	Stworzenie zespołu ekspertów w 2-4 miesiące
+•	Realizacja projektu w czasie do 24 miesięcy
+•	System pozostanie innowacyjny w monecie ukończenia i wdrożenia 
+•	Zaproponowany budżet (2,000,000 PLN +-10%) jest wystarczający na realizacje projektu
+Zatwierdzone przez Sponsora / Sponsor sign off: 	Zatwierdzone przez PM’a / PM sign off:
+
+
+4.	Cykl życia projektu
+	Cykl życia projektu SmartTravel został zaprojektowany w oparciu o klasyczne podejście liniowe z dodatkowymi elementami iteracyjnymi i adaptacyjnymi, szczególnie w fazie implementacji i testowania oprogramowania. Takie podejście pozwala na precyzyjne zaplanowanie działań przy jednoczesnym zachowaniu elastyczności w obszarach wymagających dopasowania do zmieniających się warunków rynkowych i technologicznych. 
+
+Projekt składa się z siedmiu głównych faz:
+•	Zarządzanie projektem (przekrojowe)
+	Obejmuje zarządzanie ryzykiem, jakością, wymaganiami oraz zasobami. Jej celem jest zapewnienie kontroli nad harmonogramem, zakresem, kosztami i jakością.
+•	Analiza i planowanie
+	Faza koncepcyjna, w której zbierane i doprecyzowywane są wymagania. W jej ramach rekrutowany jest zespół projektowy, tworzona jest specyfikacja wymagań technicznych i funkcjonalnych oraz nawiązywane są relacje z partnerami biznesowymi. Powstają też założenia dotyczące raportowania i współpracy.
+•	Infrastruktura IT
+	W tej fazie analizowane są możliwości technologiczne i wybierana jest architektura systemu – chmurowa lub lokalna. Określane są potrzeby w zakresie zasobów, zabezpieczeń, skalowalności oraz zawierane są umowy z dostawcami.
+•	Projektowanie
+	Projekt systemu zostaje przygotowany na dwóch poziomach – frontendowym i backendowym. Powstają prototypy, architektury komponentów oraz mechanizmy optymalizacyjne, które mają zapewnić wysoką wydajność i niskie koszty utrzymania.
+•	Wytwarzanie oprogramowania
+	To faza programistyczna, w której implementowane są interfejsy (WWW i aplikacje mobilne), silnik backendowy, API, integracje z zewnętrznymi serwisami oraz systemy bezpieczeństwa. W jej ramach przeprowadzane są również testy funkcjonalne i bezpieczeństwa.
+•	Wdrożenie i wsparcie
+	Faza obejmuje pilotażowe wdrożenie, zebranie opinii, szkolenia użytkowników i administratorów oraz uruchomienie systemu produkcyjnego. Monitorowane są działania systemu oraz obsługiwane zgłoszenia błędów.
+•	Zamknięcie projektu
+	Na końcu odbywa się formalne zakończenie projektu – spotkanie zamykające, przekazanie dokumentacji oraz ocena realizacji założeń projektowych.
+5.	Plan bazowy zakresu 
+Sponsor / Project Sponsor	Linde CEO	Project Manager /Kierownik Projektu 	
+
+Date of Project Approval? / Data zatwierdzenia projektu?
+2025-02-19
+	
+Last Revision Date/ Data ostatniej aktualizacji:
+
+2025-03-28
+	
+Target Completion Date /Planowana Data zakończenia:
+
+31.03.2027
+Scope Description / Opis Zakresu	System umożliwia zarządzania procesem planowania podróży na terenie Polski, Grecji, Hiszpanii, Włoch i Portugalii, z minimalnym udziałem użytkownika. System będzie integrował dane z różnych źródeł, takich jak:
+•	oferty biur podróży,
+•	przewoźnicy (lotniczy, kolejowi, autobusowi),
+•	hotele,
+•	prognozy pogody,
+•	agencje wynajmu samochodów.
+Na podstawie zebranych danych system będzie generować spersonalizowane plany podróży, dostosowane do preferencji użytkownika. Celem jest maksymalne zautomatyzowanie procesów, w tym m.in. rezerwacji noclegów, zakupu biletów oraz wynajmu samochodu.
+System będzie dostępny w formie:
+•	responsywnej strony internetowej,
+•	aplikacji mobilnej na platformy iOS oraz Android.
+Exclusions/Wyłączenia	1)	Obsługa podróży poza wskazanymi krajami
+ System nie wspiera planowania podróży poza granicami Polski, Grecji, Hiszpanii, Włoch i Portugalii.
+2)	Ręczna obsługa użytkownika przez personel
+ System nie oferuje wsparcia w formie bezpośredniego kontaktu z pracownikiem (np. konsultanta lub operatora). Pomoc dostępna jest wyłącznie w formie dokumentacji technicznej i ewentualnego czatu automatycznego (chatbota).
+
+3)	Brak fizycznego call center
+ Projekt nie przewiduje uruchomienia fizycznego lub telefonicznego centrum obsługi klienta.
+4)	Brak integracji z zewnętrznymi kalendarzami
+ System nie oferuje synchronizacji z kalendarzami zewnętrznymi użytkownika (np. Google Calendar, Microsoft Outlook).
+5)	Brak obsługi płatności gotówkowych lub offline
+ Wszystkie transakcje rezerwacyjne będą realizowane wyłącznie online za pomocą zintegrowanych systemów płatności elektronicznych.
+6)	Brak gwarancji pełnej dostępności usług partnerów zewnętrznych
+ System nie gwarantuje dostępności ofert, usług czy danych ze strony zewnętrznych dostawców (np. biur podróży, linii lotniczych) w czasie rzeczywistym ani ich pełnej zgodności z oczekiwaniami użytkownika.
+Project Deliverables / Rezultaty Projektu	1)	Infrastruktury IT 
+2)	Projekt systemu
+3)	Oprogramowanie 
+4)	Procedury wdrożenia system
+
+
+Acceptance Criteria / Kryteria Akceptacji	1.	Funkcjonalność użytkownika końcowego
+•	Użytkownik może utworzyć nową podróż, wybierając co najmniej kraj docelowy i termin.
+•	System generuje propozycję planu podróży w oparciu o dane z różnych źródeł (oferty, pogoda, transport, noclegi).
+•	Użytkownik może zatwierdzić, odrzucić lub edytować wygenerowany plan.
+•	Użytkownik może dokonać rezerwacji hotelu, biletów i wynajmu samochodu bezpośrednio przez system.
+•	Użytkownik może wyświetlić i pobrać szczegółowy plan podróży w formacie PDF.
+•	Użytkownik może zapisać plan podróży i wrócić do niego później.
+2.	Integracje zewnętrzne
+•	System pobiera aktualne dane z co najmniej 3 źródeł: przewoźnicy, hotele, agencje wynajmu.
+•	System uwzględnia aktualne prognozy pogody w planowaniu aktywności.
+•	Integracje odbywają się automatycznie i są aktualizowane co najmniej raz dziennie.
+3.	Personalizacja
+•	System umożliwia użytkownikowi podanie preferencji (np. budżet, typ aktywności, standard noclegu).
+•	Generowany plan podróży uwzględnia preferencje użytkownika.
+•	System proponuje alternatywy, jeśli dane preferencje nie mogą być spełnione w pełni.
+4.	Dostępność i platformy
+•	System jest dostępny jako strona internetowa (RWD).
+•	System posiada aplikację mobilną na Androida.
+•	System posiada aplikację mobilną na iOS.
+•	Rejestracja, logowanie i synchronizacja danych działają spójnie na wszystkich platformach.
+5.	Automatyzacja
+•	System potrafi automatycznie zaplanować podróż od A do Z bez ręcznej ingerencji użytkownika.
+•	System automatycznie finalizuje rezerwacje po zatwierdzeniu planu przez użytkownika.
+•	System automatycznie przypomina użytkownikowi o zbliżających się terminach podróży (np. mail/SMS/push).
+6.	Bezpieczeństwo i dane
+•	Dane użytkownika są przesyłane i przechowywane z użyciem szyfrowania (HTTPS, baza danych).
+•	System spełnia wymagania RODO w zakresie przetwarzania danych osobowych.
+•	Użytkownik może w każdej chwili usunąć swoje konto i wszystkie dane.
+7.	Wydajność i dostępność
+•	Strona ładuje się w czasie nie dłuższym niż 3 sekundy przy standardowym połączeniu.
+•	Aplikacja mobilna działa płynnie na urządzeniach z systemami Android (min. 9.0) i iOS (min. 14).
+•	System jest dostępny online 24/7 z dostępnością SLA min. 99%.
+
+Ograniczenia / Ryzyka / Constraints / Risks	⚠️ Ograniczenia
+
+1. Zakres geograficzny . System będzie obsługiwał jedynie podróże w obrębie pięciu wybranych krajów: Polska, Grecja, Hiszpania, Włochy, Portugalia.
+
+2. Źródła danych zewnętrznych . Dostępność i jakość danych zależą od integracji z zewnętrznymi API, co może ograniczać dokładność i kompletność planów podróży.
+
+3. Automatyzacja procesów Pełna automatyzacja niektórych procesów (np. zakup biletów lotniczych, rezerwacje hotelowe) może być ograniczona z powodu wymagań technicznych lub prawnych ze strony dostawców usług.
+
+4. Zależność od połączenia internetowego . System wymaga stałego dostępu do Internetu zarówno po stronie użytkownika, jak i serwera – co może ograniczyć jego użyteczność w podróży.
+
+5. Wersje językowe . W fazie początkowej system będzie dostępny tylko w języku polskim i angielskim.
+
+6. Zasoby projektowe . Czas i budżet na realizację projektu są ograniczone – może to wpłynąć na zakres wdrażanych funkcji w MVP (Minimum Viable Product).
+
+
+ 
+⚠️ Ryzyka
+1. Zmiany w API dostawców zewnętrznych Ryzyko związane z przerwami w dostępności lub zmianami w strukturze danych zewnętrznych API (np. biura podróży, linie lotnicze), co może zaburzyć działanie systemu.
+
+2. Niska jakość danych wejściowych . Niekonsekwentne lub nieaktualne dane mogą prowadzić do błędnych planów podróży lub nieudanych rezerwacji.
+
+3. Problemy z automatyzacją płatności i rezerwacji Integracja z systemami płatności i rezerwacji może być skomplikowana i obarczona błędami – ryzyko niepowodzenia transakcji.
+
+4. Ryzyka prawne (RODO, regulacje lokalne)  Przetwarzanie danych osobowych użytkowników i integracja z usługami w różnych krajach może wiązać się z niejednoznacznymi regulacjami prawnymi.
+5. Brak zainteresowania użytkowników (ryzyko rynkowe) System może nie zyskać wystarczającej popularności, jeśli nie spełni oczekiwań użytkowników lub nie trafi w potrzeby rynku.
+
+6. Problemy z wydajnością.  W przypadku dużej liczby użytkowników system może mieć trudności z zapewnieniem odpowiedniego czasu odpowiedzi i dostępności usług.
+
+7. Problemy ze wsparciem na różnych urządzeniach Aplikacja mobilna może działać niestabilnie na starszych wersjach systemów operacyjnych lub urządzeniach o niższej wydajności.
+Assumptions / Założenia	1. Użytkownicy końcowi posiadają urządzenia z dostępem do Internetu . Zakłada się, że 90% użytkowników będzie korzystać z systemu na nowoczesnych urządzeniach (posiadających wsparcie producenta) (smartfony, tablety, laptopy) z dostępem do sieci i zaktualizowanymi przeglądarkami lub systemami operacyjnymi. 
+
+2. Dostępność stabilnych API dostawców zewnętrznych . Zakłada się, że dane z biur podróży, przewoźników, hoteli, serwisów pogodowych i agencji wynajmu samochodów będą dostępne przez publiczne lub partnerskie API o stabilnym działaniu. Zakładamy, że API co najmniej 3 dostawców osiągnie SLA 99%.
+
+3. Dostępność systemów płatności online . Zakłada się, że system będzie mógł integrować się z popularnymi dostawcami płatności (np. PayU, Stripe, PayPal) w celu automatycznego finalizowania transakcji. Zakładamy, wysokie SLA dostawców płatności na poziomie 99.9%. 
+
+4. Użytkownik wyraża zgodę na przetwarzanie danych osobowych Użytkownik, zakładając konto i korzystając z systemu, akceptuje regulamin i politykę prywatności, umożliwiającą przetwarzanie jego danych zgodnie z RODO. Zakładamy, że 99% użytkowników wyrazi zgodę. 
+
+5. System będzie rozwijany w modelu MVP (Minimum Viable Product) . Zakłada się, że na początku wdrożone zostaną kluczowe funkcje (planowanie, rezerwacja, prezentacja oferty), a kolejne elementy będą dodawane etapowo.
+
+6. Wersja językowa systemu.  Zakłada się, że pierwsza wersja systemu będzie dostępna w języku polskim i angielskim, z możliwością rozszerzenia o inne języki w przyszłości.
+
+
+7. Zakres geograficzny jest stały.  W ramach projektu zakłada się obsługę podróży tylko w pięciu krajach: Polska, Grecja, Hiszpania, Włochy, Portugalia. Zakładamy możliwość dodania kolejnych krajów po 12 miesiącach od uruchomienia systemu. 
+
+8. Zespół projektowy posiada kompetencje w zakresie tworzenia aplikacji webowych i mobilnych . Zakłada się, że zespół realizujący projekt ma doświadczenie w programowaniu front-end i back-end oraz integracji z API. Zakładamy 2 letnie doświadczenie dla levelu mid, 5 letnie doświadczenie dla levelu senior, 10 letnie doświadczenie dla głównych architektów systemu. 
+
+9. Użytkownik będzie planował podróże turystyczne i biznesowe Zakłada się, że system ma na celu wspieranie podróży wypoczynkowych i biznesowych. 
+
+10. System będzie rozwijany w oparciu o architekturę skalowalną.
+ Zakłada się wykorzystanie rozwiązań technologicznych umożliwiających dynamiczne skalowanie systemu w zależności od obciążenia – takich jak architektura mikroserwisowa oraz środowiska chmurowe. Model ten pozwoli na elastyczne dostosowanie zasobów infrastrukturalnych do liczby aktywnych użytkowników, co przełoży się na proporcjonalne (liniowe) kształtowanie kosztów operacyjnych.
+W przypadku braku aktywnych użytkowników (liczba użytkowników = 0), koszty utrzymania środowiska produkcyjnego powinny być minimalne, zbliżone do zera.
+
+
+5.1	Struktura podziału pracy SPP/ Work Breakdown Structure WBS
+
+1.	Zarządzanie projektem
+1.1.	 Zarządzanie ryzykiem
+1.1.1.	Identyfikacja i analiza ryzyk
+1.1.2.	Planowanie reakcji na ryzyka
+1.1.3.	Monitorowanie i kontrola ryzyk
+1.2.	 Zarządzanie jakością
+1.2.1.	Plan zapewnienia jakości
+1.2.2.	Kryteria akceptacji
+1.2.3.	Mechanizmy kontroli jakości
+1.3.	 Zarządzanie wymaganiami
+1.3.1.	Identyfikacja wymagań biznesowych i technicznych
+1.3.2.	Dokumentacja i śledzenie wymagań
+1.3.3.	Walidacja i akceptacja wymagań
+1.4.	 Zarządzanie zasobami
+1.4.1.	Identyfikacja zasobów (ludzkich, technicznych, materiałowych)
+1.4.2.	Planowanie i alokacja zasobów
+1.4.3.	Monitorowanie wykorzystania zasobów
+2.	Analiza i planowanie
+2.1.	Zespół projektowy
+2.1.1.	Rozmowy kwalifikacyjne
+2.1.2.	Wybór kluczowych członków zespołu
+2.1.3.	Przydział ról i obowiązków
+2.1.4.	Organizacja spotkań projektowych
+2.2.	Specyfikacja wymagań
+2.2.1.	Specyfikacja techniczna
+2.2.2.	Przypadki użycia
+2.3.	Wymagania dotyczące raportowania
+2.3.1.	Wybór metod i narzędzi
+2.3.2.	Projektowanie struktury raportów
+2.4.	Relacje z partnerami biznesowymi
+2.4.1.	Identyfikacja potencjalnych partnerów
+2.4.2.	Negocjacje warunków współpracy
+2.4.3.	Podpisywanie wstępnych umów
+3.	Infrastruktura IT
+3.1.	Analiza i wybór infrastruktury
+3.1.1.	Ocena dostępnych technologii
+3.1.1.1.	Analiza kosztów
+3.1.1.2.	Raporty technologiczne
+3.1.1.3.	Porównanie dostępnych rozwiązań
+3.1.1.4.	Dokumentacja rekomendacji
+3.1.2.	Wybór chmury / serwerów
+3.1.2.1.	Specyfikacja techniczna
+3.1.2.2.	Bezpieczeństwo i prywatność danych
+3.1.2.3.	Dokumentacja wyboru
+3.1.3.	Planowanie skalowalności systemu
+3.1.3.1.	Analiza ruchu
+3.1.3.2.	Strategia skalowania
+3.1.4.	Wstępne określenie wymaganych zasobów
+3.1.4.1.	Szacowanie zapotrzebowania
+3.1.4.2.	Plan i alokacja zasobów
+3.1.4.3.	Lista wyposażenia i zasobów
+3.1.4.4.	Dokumentacja zasobów
+3.2.	Umowy z dostawcami usług cloudowych lub zakup własnej infrastruktury
+3.2.1.	Analiza umowy
+3.2.2.	Warunki SLA
+3.2.3.	Wybór planu wsparcia dla środowiska DEV, STG, PREPROD, PROD
+
+4.	Projektowanie
+4.1.	Projekt frontendów
+4.1.1.	Projekt prototypu
+4.1.2.	Projekt architektury
+4.1.3.	Sposoby na poprawienie wydajności, efektywności i optymalizacji kosztów
+4.2.	Projekt backendu
+4.2.1.	Projekt prototypu
+4.2.2.	Projekt architektury
+4.2.3.	Sposoby na poprawienie wydajności, efektywności i optymalizacja kosztów
+5.	Oprogramowanie
+5.1.	Interfejsy użytkowania (frontend)
+5.1.1.	Główna strona WWW systemu
+5.1.2.	Aplikacje mobilne (iOS, Android)
+5.1.3.	Testowanie i iteracje
+5.2.	Silnik systemu(backend)
+5.2.1.	API agregator
+5.2.1.1.	Integracja z API biur podróży, hoteli, portali
+5.2.2.	Bezpieczeństwo i integralność danych
+5.2.2.1.	Ochrona przed DDoS
+5.2.2.2.	System kontroli dostępu
+5.2.2.3.	Eliminacja zanieczyszczenia danych (data contamination)
+5.2.3.	Audyty
+5.2.3.1.	Audyt API integratora
+5.2.3.2.	Testy bezpieczeństwa/testy penetracyjne
+5.2.3.3.	Audyt bezpieczeństwa wersji pilotażowej 
+6.	Wdrożenie i wsparcie
+6.1.	Wdrożenie wersji pilotażowej
+6.1.1.	Zebranie opinii użytkowników
+6.1.2.	Korekta strategii (jeżeli potrzebna)
+6.2.	Strategia wdrożenia 
+6.2.1.	Strategia wdrożenia w modelu cloud / on-premise 
+(w zależności od wyboru w pkt. 3)
+6.2.2.	Monitorowanie po wdrożeniu
+6.3.	Szkolenia użytkowników i administratorów
+6.3.1.	Dokumentacja użytkownika
+6.3.2.	Webinary i kursy
+6.3.3.	Monitorowanie i utrzymanie systemu
+6.3.3.1.	Obsługa zgłoszeń błędów
+6.3.3.2.	Optymalizacja systemu
+7.	Zamknięcie projektu
+7.1.	Spotkanie zamykające projekt
+7.2.	Przekazanie dokumentacji projektu
+
+5.2 Katalog SPP/WBS dictionary
+W poniższej lokalizacji znajduje się graficzne przedstawienie WBS
+WBS_Directory_Completed.xlsx
+
+6.	Harmonogram bazowy
+Harmonogram realizacji projektu dostępny w lokalizacji:
+Stworzenie aplikacji mobilnej SmartTravel v2.pod
+
+7.	Plan bazowy kosztów
+Plan bazowy kosztów znajduje się w poniższej lokalizacji 
+Plan bazowy kosztów Linde rev 2 25052025 wersja ostateczna.xlsx
+
+8.	Plan zarządzania harmonogramem
+8.1	Podstawy opracowania harmonogramu
+Harmonogram powstanie w oparciu o:
+•	zakres prac i celów zawartych w dokumentacji projektowej,
+•	szczegółową analizę funkcjonalną i techniczną systemu,
+•	rozmowy z członkami zespołu, dostawcami API i interesariuszami,
+•	dostępność zasobów ludzkich oraz zewnętrznych partnerów,
+•	metodologię hybrydową: tradycyjnie w inicjacji, planowaniu i kontroli oraz Scrum w etapie deweloperskim.
+Należy uwzględnić logiczne zależności między zadaniami (m.in. Finish-to-Start), estymacje czasowe oraz typowe ryzyka wpływające na harmonogram.
+
+8.2	 Model harmonogramu projektu
+Model harmonogramu oparty jest na strukturze faz projektu i zidentyfikowanych kamieniach milowych. Harmonogram obejmuje 10 etapów, w tym: planowanie, budowę zespołu, analizę wymagań, projektowanie, wytwarzanie oprogramowania, testowanie, wdrożenie i zamknięcie. W harmonogramie należy zastosować zależności logiczne (Finish-to-Start) na poziomie szczegółowych zadań i etapów, bufory fazowe między głównymi fazami harmonogramu, jako identyfikacja punktów przejścia pomiędzy fazami z uwzględnieniem ryzyka opóźnień, określeniu długości bufora oraz rezerwy zarządzania na poziomie całego harmonogramu, poza zakresem kontrolowanym przez kierownika projektu, ujęta na poziomie planowania strategicznego
+
+8.3	 Metody i narzędzia harmonogramowania
+•	Metoda łańcucha krytycznego (CCPM) - identyfikacja zadań krytycznych
+•	Wykres Gantta – wizualizacja harmonogramu głównego
+•	Planowanie iteracyjne (Scrum) w fazie wytwarzania oprogramowania , testowania
+•	Narzędzia: MS Project (harmonogram główny), Jira (śledzenie postępu prac zespołu projektowego), Confluence (komunikacja zespołu projektowego), Excel (raporty)
+•	Estymacja: technika Delphi (Uzyskanie rzetelnych szacunków czasu lub nakładu pracy poprzez anonimową opinię wielu ekspertów) + konsultacje z ekspertami
+
+
+8.4	Długość iteracji i wydań
+•	MVP: koniec marca 2027
+•	Wersja beta/pilot: sierpień 2027
+•	Wersja finalna: październik 2027
+
+8.5	 Poziom dokładności szacowań i rezerwy czasowe
+Szacunki czasu realizacji zadań przyjęto z dokładnością +/- 10% na podstawie konsultacji z zespołem oraz danych historycznych.
+W harmonogramie przewidziano następujące rezerwy:
+•	Bufory fazowe: 5–10% między głównymi etapami – zależeć będą od złożoności fazy, ryzyka opóźnień, doświadczenia zespołu, zależności od podmiotów zewnętrznych oraz danych historycznych. Im większe ryzyko i niepewność, tym większy bufor.
+•	Bufor zarządzania: 10% całkowitego czasu
+•	Sprint buforowy po fazie testów MVP
+
+8.6	 Jednostki miary zasobów
+Jednostką miary dla zasobów ludzkich jest osoba-dzień (manday = 8h pracy).
+Zasoby sprzętowe i narzędziowe mierzone są w jednostkach liczbowych lub godzinach dostępu do środowiska.
+
+8.7	Powiązania z procedurami organizacyjnymi 
+Harmonogram podlega zatwierdzeniu zgodnie z procedurą zarządzania zmianą oraz planem komunikacji. Każda zmiana musi zostać zarejestrowana w Rejestrze Zmian Harmonogramu, zatwierdzona przez Kierownika Projektu i zakomunikowana interesariuszom. Aktualizacje są spójne z cyklem raportowania statusów projektu.
+
+8.8	 Utrzymanie modelu harmonogramu i monitorowanie
+Harmonogram projektu jest utrzymywany w wersji elektronicznej w MS Project oraz na platformie Confluence.
+Monitorowanie odbywa się poprzez:
+•	Codzienne stand-upy i raporty postępu (Zespół Projektowy)
+•	Przeglądy sprintów (każde 2 tygodnie)
+•	Comiesięczne przeglądy strategiczne z interesariuszami
+•	Aktualizacje harmonogramu bazowego i wersjonowanie zmian - co miesiąc lub po każdej większej zmianie zakresu, terminów lub zasobów przez PM na podstawie dostarczonych danych wejściowych 
+•	Prowadzenie Rejestru Zmian Harmonogramu oraz Rejestru Ryzyk
+
+8.9	Kamienie milowe
+•	Zatwierdzenie planu projektu
+•	Zatwierdzenie specyfikacji
+•	Gotowość MVP
+•	Wdrożenie pilotażowe
+•	Publiczne wydanie
+•	Zamknięcie projektu
+Osiągnięcie progów jest warunkiem przejścia do kolejnych faz.
+
+8.10	Zasady pomiaru wykonania prac
+Postęp realizacji będzie mierzony:
+•	Procentowym ukończeniem zadań w Jira
+•	Wskaźnikiem Earned Value (EVM) dla głównych komponentów- SPI (wydajność czasowa), CPI (wydajność kosztowa) oraz SV (odchylenie harmonogramowe). Progi tolerancji dla SPI i CPI wynoszą ±10%. W przypadku przekroczenia progów (np. SPI < 0,9), kierownik projektu analizuje przyczyny i wdraża działania korygujące. Gdy wskaźniki spadną poniżej 0,8, konieczna jest eskalacja do sponsora i rozważenie uruchomienia rezerwy zarządzania.
+•	Velocity zespołów deweloperskich w sprintach
+•	Porównaniem harmonogramu aktualnego do bazowego
+
+8.11	 Formaty i częstotliwość raportów harmonogramu
+Raportowanie będzie odbywało się w następujący sposób:
+•	Cotygodniowe statusy (PDF + dashboard Jira)
+•	Comiesięczne raporty harmonogramowe (Excel/MS Project – tabele porównawcze plan vs wykonanie, postępy prac, prognozy/ aktualizacja z zaznaczeniem zmian)
+•	Kwartalne przeglądy strategiczne (PowerPoint  (analiza postępu prac w formie prezentacji)+ Gantt)
+•	Raport końcowy przy zamknięciu projektu
+
+8.12	12. Reagowanie na odchylenia
+W przypadku istotnego odchylenia od harmonogramu bazowego takie jak: SPI poniżej 0,9, opóźnienie kamienia milowego o więcej niż 5 dni roboczych, ryzyko przekroczenia terminu końcowego projektu, przekroczenie bufora fazowego lub konieczność uruchomienia rezerwy zarządzania.:
+•	Kierownik projektu analizuje odchylenie i jego wpływ
+•	Zespół zgłasza możliwe działania naprawcze
+•	Zmiany krytyczne  wpływające na termin zakończenia projektu, kamienie milowe, zakres funkcjonalny, budżet lub wymagające użycia rezerwy zarządzania, wymagają akceptacji sponsora projektu. Zmiany tego typu są dokumentowane w Rejestrze Zmian Harmonogramu i muszą być zatwierdzone przed wdrożeniem.
+•	Wszystkie zmiany dokumentowane są w rejestrze i zatwierdzane zgodnie z planem zarządzania zakresem i komunikacją
+
+8.13	 Odpowiedzialności
+•	Kierownik Projektu (PM) - Główna odpowiedzialność za planowanie, aktualizację i kontrolę harmonogramu. Zatwierdzanie zmian, prowadzenie rejestru zmian harmonogramu, komunikacja z interesariuszami, przygotowywanie raportów.
+•	Product Owner - Priorytetyzacja backlogu produktu, planowanie zakresu sprintów, współpraca z PM przy aktualizacjach harmonogramu funkcjonalnego.
+•	Zespół Deweloperski - Realizacja zadań zgodnie z harmonogramem sprintów, bieżące raportowanie statusów, zgłaszanie ryzyk czasowych.
+•	Analityk Biznesowy - Udział w planowaniu faz analizy i walidacji wymagań, monitorowanie zgodności harmonogramu z celami funkcjonalnymi.
+•	Testerzy / QA - Planowanie i realizacja testów zgodnie z harmonogramem faz QA i UAT. Zgłaszanie blokujących błędów mogących wpłynąć na harmonogram.
+•	Interesariusze (klient, sponsor) - Akceptacja kluczowych kamieni milowych (progów kontrolnych), udział w przeglądach strategicznych, zatwierdzanie przesunięć wpływających na zakres i terminy końcowe
+
+9.	Plan zarządzania jakością
+9.1	Cele zarządzania jakością 
+	Głównymi celami zarządzania jakością w projekcie "SmartTravel - Autonomiczny System Planowania Podróży" jest zapewnienie:
+•	co najmniej 95% poprawności generowanych planów podróży
+•	maksymalnej automatyzacji procesów podróży (min. 80% redukcji udziału użytkownika w porównaniu do manualnego planowania podróży),
+•	terminowej realizacji głównych etapów projektu (kamienie milowe osiągnięte zgodnie z harmonogramem),
+•	kompletności dokumentacji projektowej (min. 99% zgodności z wymaganym zakresem),
+•	utrzymanie kosztów projektu w zakładanym budżecie z tolerancją nieprzekraczającą 5%,
+•	zgodności z wymaganiami funkcjonalnymi i niefunkcjonalnymi,
+•	satysfakcji kluczowych interesariuszy,
+•	zgodności z przepisami (ISO, RODO, standardy API, WCAG).
+
+9.2	Standardy i normy 
+	Projekt "SmartTravel - Autonomiczny System Planowania Podróży " będzie stosować się do następujących standardów:
+•	ISO 25010 – standard jakości oprogramowania, 
+•	WCAG 2.1 – wytyczne dostępności treści internetowych,
+•	OWASP Top 10 – bezpieczeństwo aplikacji webowych,
+•	ISO 21500 – standard zarządzania projektami
+9.3	Procesy zarządzania jakością 
+9.3.1	Planowanie jakości
+•	Ustalenie kluczowych wskaźników jakości i wymagań od interesariuszy,
+•	Stworzenie strategii testów i planu jakości obejmującego całość cyklu życia projektu,
+•	Każde zadanie z Product Backlogu zawiera kryteria akceptacji,
+•	Zespół tworzy Definition of Ready i Definition of Done dla zapewnienia jednoznacznych standardów,
+•	Definiowanie oczekiwanych rezultatów testów,
+•	Kryteria akceptacji są definiowane podczas etapu planowania Sprintu
+9.3.2	 Zapewnienie jakości 
+•	Regularne przeglądy kodu - odbywają się co najmniej raz na każdy request ze strony programisty. Uczestniczy w nich przynajmniej dwóch członków zespołu. Kod oceniany jest pod kątem: zgodności z wymaganiami, czytelności oraz zgodności ze standardami.
+•	Testy jednostkowe i integracyjne są realizowane w czasie Sprintu,
+•	QA Manager uczestniczy w Daily i monitoruje jakość pracy,
+•	Ciągła integracja z automatycznymi testami,
+•	JIRA używana do śledzenia błędów i ich priorytetyzacji w Backlogu.
+9.3.3	 Kontrola jakości
+•	Przegląd wyników odbywa się w czasie Review,
+•	Weryfikacja spełnienia Definition of Done,
+•	Analiza błędów jakościowych podczas Retro,
+•	Identyfikowanie i rozwiązywanie problemów za pomocą diagramu Pareto,
+•	Rejestrowanie usprawnień do wdrożenia w kolejnym Sprincie.
+
+9.3.4	 Ciągłe usprawnianie
+•	Prowadzenie rejestru wiedzy nabytej (lessons learned log) i korzystanie z niego,
+•	Audyty jakości po każdym Sprincie
+•	Budowa/promowanie kultury jakości w zespole
+•	Spotkania feedbackowe - omówienie sukcesów oraz obszarów do poprawy
+
+
+
+9.4	 Metryki i KPI jakościowe
+Metryka	Wartość docelowa
+Poprawność planów podróży	≥ 95%
+Redukcja udziału użytkownika	≥ 80%
+Czas generowania planu podróży	≤ 5 minut
+Pokrycie kodu testami jednostkowymi	≥ 80%
+Liczba krytycznych błędów	≤ 1 na 100 użytkowników
+Uptime systemu	≥ 99.5%
+Czas reakcji na zgłoszenie błędu krytycznego	≤ 1h
+Czas naprawy błędu krytycznego	≤ 4h
+Realizacja kamieni milowych	100% zgodności z harmonogramem
+Kompletność dokumentacji projektowej	≥ 99%
+Odchylenie kosztów projektu względem budżetu	≤ 5%
+
+9.5	Role i odpowiedzialności
+Rola	Odpowiedzialności
+Kierownik Projektu/Scrum Master	Nadzór nad planem jakości, Wsparcie w usuwaniu problemów, promowanie kultury jakości
+QA Engineer	Tworzenie planu testów, nadzór nad testowaniem, audyty
+Product Owner	Definicja wymagań jakościowych, priorytetyzacja zgłoszeń
+Testerzy	Wykonywanie testów, raportowanie błędów, retesty, dbanie o zgodność z Definition of Done
+Deweloperzy	Automatyzacja testów, monitorowanie wydajności
+
+9.6	 Narzędzia i techniki
+•	JIRA – zarządzanie backlogiem i błędami,
+•	Diagram Pareto 
+•	Lessons learned log – Rejestr wiedzy nabytej
+•	GitHub – CI/CD i automatyczne testy,
+•	Lista kontrolna QA – zatwierdzenie niezbędnych funkcjonalności,
+•	SonarQube – analiza jakości kodu,
+
+9.7	 Zarządzanie zmianami w jakości
+•	Zmiany są ustalane podczas Review i Retro,
+•	Ocena wpływu zmiany na zakres, budżet i harmonogram,
+•	Każda zmiana w wymaganiach jakościowych musi być zgłaszana do Product Ownera,
+•	Zmiany w Definition of Done są zatwierdzane przez cały zespół,
+•	Zmiany w backlogu jakościowym są priorytetyzowane przez Product Ownera
+•	Aktualizacja dokumentów QA (plan testów, kryteria akceptacji),
+•	Archiwizacja zmian w rejestrze zmian (Change Log).
+•	Zmiany wdrażane są iteracyjnie
+
+9.8	Doskonalenie jakości i kultura zapewnienia jakości
+•	Szkolenia zespołu projektowego z zakresu standardów i narzędzi zapewniania jakości,
+•	Koncepcja "quality by design",
+•	Regularne retrospektywy po każdym sprincie z identyfikacją usprawnień,
+•	Wspieranie inicjatyw członków zespołu w zakresie poprawy jakości,
+•	Ankiety satysfakcji interesariuszy i użytkowników testowych.
+
+9.9	Kluczowe procedury jakościowe w projekcie
+•	Procedura zarządzania zmianą – opisuje sposób zgłaszania, oceny i zatwierdzania zmian wpływających na jakość projektu
+•	Procedura audytów wewnętrznych – regularne przeglądy procesów i dokumentacji 
+•	Procedura zgłaszania błędów projektowych – definiuje kanały zgłaszania błędów organizacyjnych, dokumentacyjnych i proceduralnych
+•	Procedura odbiorów etapowych – wskazuje, kto i w jaki sposób odbiera poszczególne rezultaty projektu.
+
+9.10	Zakończenie i ocena jakości
+•	Podczas fazy zamknięcia projektu przeprowadzona zostanie ocena jakości:
+•	Analiza zgodności rezultatu z wymaganiami,
+•	Raport jakościowy z wnioskami i rekomendacjami,
+•	Lessons learned i ich archiwizacja,
+•	Przekazanie dokumentacji operacyjnej i wsparcia utrzymaniowego.
+	Plan zarządzania jakością podlega zatwierdzeniu przez Kierownika Projektu oraz Sponsora i może być aktualizowany w trakcie trwania projektu.
+
+10.	Plan zarządzania zasobami
+10.1	Pozyskiwanie zespołu
+Rola lub ekspert merytoryczny (SME)	Źródło pozyskania
+Kierownik Projektu	Sponsor Projektu, Menager Zasobów
+Pozostali członkowie zespołu projektowego	Menager Zasobów, Kierownik Projektu
+
+10.2	Zarządzanie zespołem
+Zarządzanie liniowe wszystkimi członkami zespołu projektowego będzie sprawowane przez Kierownika Projektu, który pełni jednocześnie rolę przełożonego liniowego. Przekazuje wizje biznesową do Product Owner’ów. Wszelkie kwestie związane z wydajnością, zaangażowaniem lub potrzebą wsparcia będą rozwiązywane bezpośrednio przez Kierownika Projektu. Członkowie zespołu projektowego będą raportować postępy prac bezpośrednio do Kierownika Projektu. W przypadku konfliktów priorytetów lub ograniczeń zasobów, decyzje będą podejmowane przez Kierownika Projektu we współpracy z Menedżerem Zasobów.
+
+10.3	Struktura organizacyjna projektu
+
+
+10.4	 Identyfikacja zespołu, role i odpowiedzialności
+Rola	Uprawnienia	Odpowiedzialność	Kwalifikacje	Kompetencje wymagane w projekcie
+Scrum Master	Może organizować i moderować wszystkie wydarzenia Scrum (daily, review, retro, planning)
+ , proponować zmiany w procesie, narzędziach, strukturze zespołu – w duchu zwinności,
+eskalować problemy techniczne, organizacyjne lub procesowe do odpowiednich działów.
+	Wsparcie zespołu deweloperskiego, monitorowanie realizacji sprintów	Certyfikat Scrum Mastera, znajomość metodyk zwinnych	Facilitacja, komunikacja, umiejętność pracy z zespołem
+ 
+
+Product Owner	Decyzje dot. backlogu produktu, akceptacja funkcji	Zarządzanie backlogiem, planowanie zakresu sprintów, komunikacja z interesariuszami	Doświadczenie w zarządzaniu produktem, znajomość rynku	Myślenie strategiczne, zrozumienie użytkownika, priorytetyzacja 
+System Architect	Decyzje techniczne dotyczące architektury	Projektowanie architektury systemu, nadzór nad spójnością technologii	Wykształcenie techniczne, min. 10 lat doświadczenia	Mikroserwisy, chmura, skalowalność, bezpieczeństwo, DevOps
+AI/ML Engineer	Dobór i wdrażanie modeli AI/ML	Projektowanie i trenowanie modeli rekomendacyjnych, przetwarzanie danych	Doświadczenie w AI/ML (Python, TensorFlow)	Umiejętność trenowania modeli, optymalizacja, integracja z backendem
+UI Designer	Propozycje layoutów i wzorców UX	Tworzenie makiet interfejsu, prototypowanie, współpraca z frontendem	Doświadczenie w Figma/Sketch, znajomość zasad UI/UX	Projektowanie dostępnych i intuicyjnych interfejsów, znajomość design systemów
+
+
+
+QA Engineer	Propozycje rozwiązań frontendowych, code review	Rozwój aplikacji webowej i mobilnej (UI), integracja z backendem	React, TypeScript, RWD, min. 5 lat doświadczenia	Optymalizacja wydajności, testowanie komponentów, integracja API
+Senior Backend Developer	Propozycje rozwiązań architektury serwera, integracji	
+Budowa logiki aplikacji, integracja z API, bezpieczeństwo danych	
+Python, REST, bazy danych, min. 5 lat doświadczenia	Projektowanie API, bezpieczeństwo danych, wydajność, zgodność z RODO
+Kierownik Projektu	Akceptacja kosztów do 15 tys. zł. Decyzje dotyczące czasu i kosztów podejmowane w ramach tolerancji projektowych.	Codzienne zarządzanie projektem
+	Kwalifikacje z zakresu zarządzania projektami 	Preferowana znajomość języka angielskiego
+
+DevOps	- Dostęp do środowisk DEV, STG, PREPROD, PROD - Uprawnienia do konfigurowania pipeline’ów CI/CD - Dostęp do logów, metryk i narzędzi monitorujących	- Konfiguracja i utrzymanie środowisk developerskich i produkcyjnych - Wdrażanie automatyzacji procesów (CI/CD) - Monitorowanie działania systemu - Zarządzanie infrastrukturą chmurową - Wsparcie w zakresie wydajności i bezpieczeństwa	- Wykształcenie informatyczne lub pokrewne - Certyfikaty (np. AWS, Azure, Kubernetes, Docker) - Doświadczenie w pracy DevOps (min. 3 lata)	- Znajomość chmur publicznych (np. AWS, Azure) - Znajomość konteneryzacji (Docker, Kubernetes) - Umiejętność konfiguracji CI/CD (GitLab, Jenkins) - Monitoring (Prometheus, Grafana) - Znajomość automatyzacji i IaC (Terraform, Ansible)
+
+10.5	Wymagania dotyczące szkoleń
+Szkolenia obowiązkowe dla całego zespołu
+Temat szkolenia	Cel	Format	Uczestnicy	Częstotliwość
+Wprowadzenie do projektu SmartTravel	Zrozumienie wizji, celów i architektury systemu	Warsztat (na żywo lub online)	Wszyscy członkowie zespołu	Jednorazowo na start projektu
+RODO i ochrona danych osobowych	Zasady zgodności z przepisami dot. przetwarzania danych osobowych	Szkolenie e-learning	Wszyscy członkowie zespołu	Co 12 miesięcy
+Narzędzia projektowe (Jira, Confluence, MS Project)	Ujednolicenie pracy w systemach zarządzania projektami	Warsztaty / szkolenie online	Wszyscy członkowie zespołu	Na etapie onboardingu i przy dużych zmianach
+Organizacja i zarządzanie szkoleniami
+•	Plan szkoleń – przygotowywany przez Kierownika Projektu i HR na etapie planowania fazy wdrożeniowej.
+•	Budżet szkoleniowy – alokacja min. 3% budżetu operacyjnego na rozwój kompetencji.
+•	Rejestr szkoleń – dokumentowany w Confluence lub dedykowanym narzędziu HR.
+10.6	System nagród i uznań
+Uznanie niematerialne (natychmiastowe)
+Forma uznania	Opis	Kto przyznaje
+Publiczna pochwała na spotkaniu zespołu	Podziękowanie za szczególne zaangażowanie lub osiągnięcie	Kierownik Projektu, PO
+Wyróżnienie w komunikatorze (Slack, Teams)	Szybkie wyróżnienie osoby/zespołu za dobrze wykonane zadanie	Każdy członek zespołu
+
+ Nagrody materialne (okresowe)
+Typ nagrody	Opis	Kryteria przyznania	Częstotliwość
+Karta podarunkowa (200–500 zł)	Za realizację kluczowego kamienia milowego przed terminem	Terminowość, jakość, zaangażowanie	Co kwartał
+Premia finansowa (uznaniowa)	Za rozwiązanie krytycznego problemu technicznego	Decyzja Kierownika Projektu i Sponsora	Dla 1–2 osób / projekt
+Nagroda zespołowa (np. wspólny lunch, escape room)	Za wyjątkową współpracę i osiągnięcie zespołowe	Wspólny sukces zespołu przy dużym wydaniu	Po zakończeniu fazy MVP/finalnej
+
+10.7	 Rozwój i budowanie zespołu
+Aby wspierać atmosferę zaufania, współpracy i dobrej komunikacji w zespole rozproszonym geograficznie, zaplanowano:
+1.	Spotkanie inauguracyjne (Kick-off Meeting + Welcome Box)
+2.	Miesięczne spotkania integracyjne online (Virtual Team Café)
+3.	Team Lunch / Escape Room – faza MVP i wdrożenie końcowe
+4.	Kanał #social na Slacku/Teams
+10.8	Identyfikacja i szacowanie sprzętu / materiałów
+Cost 	Description	Spec.	Quantity	Proposed supplier
+EQ001	Laptopy deweloperskie	Min. Intel i7, 32GB RAM, SSD 1TB	19 szt.	Dell / Lenovo / HP/Mac
+EQ002	Laptopy dla pozostałych członków zespołu	Min. Intel i5, 16GB RAM, SSD 512GB	7 szt.	Dell / HP / Acer
+EQ003	Monitory zewnętrzne	24–27 cali, Full HD / 2K	26 szt.	LG / Dell
+EQ004	Klawiatury i myszki	Zestawy ergonomiczne USB	26 kompletów	Logitech / Microsoft
+EQ005	Serwery developerskie i testowe	Środowiska DEV, STG, PREPROD	4 środowiska	AWS/ Google / Azure / lokalny dostawca
+EQ006	Chmura obliczeniowa	Środowisko produkcyjne (skalowalne, HA, RDS, S3 etc.)	wg potrzeb	AWS / Azure / GCP
+EQ007	Narzędzia do projektowania	Figma Professional, Adobe Creative Cloud	2 licencje	Figma / Adobe
+EQ008	Jira / Confluence	Zarządzanie projektem, backlog, dokumentacja	25 kont	Atlassian
+EQ009	Komunikator wewnętrzny	Microsoft Teams / Slack	26 kont	Microsoft / Slack Technologies
+EQ010	CI/CD	GitHub Actions, Docker, Jenkins	Konfiguracja automatyczna	GitHub / Docker / Jenkins
+EQ011	Narzędzia do testów	Selenium, Postman	2 licencje	Open Source / licencje Pro
+EQ012	Urządzenia testowe (smartfony, tablety)	Android/iOS (różne wersje systemów)	6 urządzeń	Samsung / Apple
+EQ013	Narzędzia testowe online	BrowserStack / Firebase	5 dostępów	BrowserStack / Google
+EQ015	VPN i zapory sieciowe	Bezpieczny dostęp do środowisk	10 użytkowników	NordLayer / Fortinet / Zscaler
+EQ016	Materiały szkoleniowe i kursy	PDF, wideo, webinary, kursy zewnętrzne	1 komplet	Zespół wewnętrzny / freelancerzy
+
+10.9	Pozyskiwanie zasobów sprzętowych i materiałowych
+W projekcie SmartTravel wszystkie materiały, sprzęt oraz licencje będą pozyskiwane zgodnie z obowiązującą polityką zakupową organizacji.
+10.10	Zarządzanie zasobami sprzętowymi i materiałowymi
+Zgodnie z obowiązującą polityką organizacji
+11.	Plan zarządzania ryzykiem
+Plan Zarządzania Ryzykiem jest procedurą, która definiuje działania takie jak rozpoznawanie, ocena i planowanie, reagowanie, wdrażanie i monitorowanie działań w przypadku wystąpienia potencjalnych zagrożeń na projekcie.
+Osobą odpowiedzialną za wdrożenie i kontrolę Planu Zarządzania Ryzykiem jest Project Manager.
+
+
+11.1	Procedura Zarządzania Ryzykiem 
+Każde ryzyko będzie przyporządkowane do wybranego przez project managera członka zespołu, który będzie odpowiedzialny za jego monitorowanie, opracowanie planu jego ograniczenia oraz planu awaryjnego na wypadek, gdyby ryzyko się zmaterializowało.
+Powstanie karty rejestru ryzyk będzie poprzedzone następującymi analizami:
+
+11.2	Identyfikacja ryzyka w projekcie
+Istotnym elementem rozpoznawania ryzyk  na projekcie będzie konsultacja z członkami zespołu w szczególności w początkowej fazie projektu podczas spotkań tzw. burzy mózgów. Na późniejszym etapie będą również przeprowadzane konsultacje wśród interesariuszy projektu celem zidentyfikowania potencjalnych zagrożeń/szans dla projektu.
+Na podstawie powyższych działań powstanie lista zidentyfikowanych ryzyk projektu.
+
+11.3	Przeprowadzenie jakościowej analizy ryzyk 
+Dla każdego zidentyfikowanego ryzyka zostanie przeprowadzona analiza prawdopodobieństwa jego wystąpienia i ocena wpływu na projekt. 
+ Dla Każdego ryzyka będzie oceniane prawdopodobieństwo zdarzenia wg skali:
+Poziom	% / 
+ Bardzo małe prawdopodobieństwo 1	0-9%
+małe prawdopodobieństwo 2	9-15%
+Średnie prawdopodobieństwo 3	16-30%
+Wysokie prawdopodobieństwo 4	31-60%
+Bardzo wysokie prawdopodobieństwo 5	61-100%
+
+
+
+
+
+
+Dla tych samych ryzyk będzie wskazany wpływ na termin w dniach i koszt w zł wg skali:
+Poziom wpływu	Koszt zł	Czas
+Bardzo mały   	>= 2000	<=1 dzień
+Mały wpływ   	> 2000< 4 000	>1-2 dni 
+Średni wpływ                   	> 4000 <10000	> 3 dni < 5dni
+Duży wpływ                 	>10000<30000	>5 dni >10 dni
+Bardzo duży wpływ	>30000	>10 dni
+
+11.4	Zdefiniowane skale ocen dla oszacowania prawdopodobieństwa i wpływu.
+
+Wpływ	Prawdopodobieństwo 		
+	1	2	3	4	5
+1	1	2	3	4	5
+2	2	4	6	8	10
+3	3	6	9	12	15
+4	4	8	12	16	20
+5	5	10	15	20	25
+ 	 	 	 		
+ 	 	 	 		
+ 	Duże ryzyko	 		
+ 	Średnie ryzyko	 		
+ 	Małe ryzyko	 		
+ 	 	 	 		
+
+11.5	Planowanie reakcji na ryzyko
+ Działania zaradcze dla ryzyk:
+I)	Ryzyko  małe- reakcja poprzez akceptację, unikanie bądź redukcja.
+II)	Ryzyko średnie- reakcja poprzez  redukcję, unikanie  
+III)	Ryzyko wysokie –reakcja poprzez redukcja oraz co najmniej 1 plan rezerwowy
+IV)	Reakcje na szanse- reakcja poprzez wykorzystanie, wzmocnienie, bądź odrzucenie
+
+11.6	Definicje kategorii ryzyk
+I.	Ryzyko finansowe – dotyczy z przekroczeniem planowanego budżetu projektu.
+II.	Ryzyko terminowe- wynikające z wydłużenia terminu końcowego zakończenia projektu.
+III.	Ryzyko związane z wynikami- wynikające z niezadowalających rezultatów projektu.
+IV.	Ryzyko technologiczne – związane z użytą w projekcie technologią.
+
+11.7	Kategorie dla sposobu oceny bliskości dla ryzykownych zdarzeń
+1.	Wkrótce- oznacza możliwość wystąpienia zdarzenia w przeciągu najbliższych 3 miesięcy.
+Działania zaradcze :monitoring ciągły na spotkaniach dotyczących przeglądu ryzyk projektu.
+2.	W trakcie trwania projektu- oznacza możliwość wystąpienia zdarzenia w przeciągu w horyzoncie trwania projektu
+Działania zaradcze: monitoring na spotkaniach dotyczących przeglądu ryzyk projektu. 
+3.	Po zakończeniu projektu- oznacza możliwość wystąpienia zdarzenia po wdrożeniu produktu na rynek w czasie jego komercyjnego okresu użytkowania.
+Działania zaradcze min. Przygotowanie planów awaryjnych, ciągły monitoring .
+
+11.8	Monitorowanie i komunikowanie Ryzyka  
+Przeglądy karty rejestru ryzyk będą organizowane regularnie poprzez co miesięczne     spotkania zespołu w trakcie trwania projektu – przewidziany czas spotkania to 1h.
+Na spotkaniach tych będą uczestniczyć właściciele ryzyk, omawiane będą analizowane ryzyka bieżące jak również zidentyfikowane nowe ryzyka.
+Kierownik projektu będzie regularnie wysyłał aktualizacje statusu karty rejestru ryzyk do członków zespołu projektowego oraz Zarządu, sprawdzał kartę pod kątem zmian jak również wyrywkowo kontaktował się z osobami zarządzającymi poszczególnymi ryzykami
+Decyzje dotyczące formalnych działań zarządzania ryzykiem będą podjęte:
+a.	Tydzień po stworzeniu karty rejestru ryzyk i zatwierdzeniu jej przez Kierownika Projektu 
+b.	Każdorazowo na przeglądach karty rejestru ryzyk w zakresie kompetencji Kierownika Projektu 
+c.	Tydzien po przeglądzie karty rejestru ryzyk jeżeli decyzję będą w zakresie kompetencji Zarządu.
+
+11.9	Wskaźniki wczesnego ostrzegania zastosowane w projekcie w celu monitorowania aspektów projektu o krytycznym znaczeniu. 
+I.	Odchylenia od harmonogramu – powyżej 5 dni
+II.	Odchylenia od budżetu powyżej 10 tyś. zł.
+III.	Spadek satysfakcji grupy testowej korzystania z aplikacji – negatywne opinie powyżej 20% komentarzy
+
+11.11	Tolerancja ryzyka
+Po przeprowadzeniu analizy ryzyka i ocenie to do pewnego poziomu Kierownik Projektu określa stopień ryzyka jaki jest gotowy podjąć aby zrealizować swoje cele i zadania.
+Ryzyko wysokie o poziomie wpływu powyżej 15 tyś zł wymaga akceptacji zarządu.
+Ryzyka średnie i niskie są w zakresie odpowiedzialności Kierownika Projektu
+
+11.12	Budżet ryzyka
+Projekt przewiduje rezerwę budżetową na ryzyko w wysokości 3 % wartości Projektu.
+
+11.13	Karta rejestru ryzyk/szans
+Karta rejestru ryzyk należy wypełniać w formacie Excel stanowiący załącznik nr 1 do niniejszego Planu Zarządzania Ryzykiem.
